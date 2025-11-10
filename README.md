@@ -3,7 +3,7 @@
 #### Technical Skills: Python, SQL, Tensorflow
 
 ## Education
-- Computer Science | Universitas Pendidikan Indonesia (2021-now)
+- Computer Science | Universitas Pendidikan Indonesia (2021-2025)
 - Machine Learning Cohort | Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka (2024)
 
 ## Certification
