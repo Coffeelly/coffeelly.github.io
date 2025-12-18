@@ -1,0 +1,24 @@
+# Site settings
+title: Muhammad Fikri Kafilli Data Science Portfolio
+description: A website for me to keep track of my learning progress
+#baseurl: "/particle" # the subpath of your site, e.g. /blog
+url: https://www.linkedin.com/in/muhammad-fikri-kafilli-75a2462a2/
+
+# User settings
+username: Muhammad Fikri Kafilli
+user_description: Hi I am Muhammad Fikri Kafilli from Indonesia. I am immersed in the dynamic field of artificial intelligence. I hold a Bachelor's degree in Computer Science from Universitas Pendidikan Indonesia.
+user_passion: My passion lies in leveraging data to solve real-world challenges, and I find great satisfaction in applying statistical insights to drive meaningful outcomes. I am dedicated to staying at the forefront of AI advancements and actively keep myself updated with new technologies and methodologies in the field. I believe in the power of continuous learning and actively seek opportunities to learn from others in the AI and data science community.
+user_sign_off: Feel free to connect with me on LinkedIn!
+
+user_title: Data Scientist
+user_country: Indonesia
+email: mfkafilli@gmail.com
+linkedin: https://www.linkedin.com/in/muhammad-fikri-kafilli-75a2462a2/
+github_username:  Coffeelly
+
+
+# Google-analytics
+google-analytics:
+  id: ""
+
+exclude: ['package.json', 'src' , 'node_modules']
