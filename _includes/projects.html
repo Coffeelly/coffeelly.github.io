@@ -266,13 +266,15 @@
       <div class="tech-stack">
         <span class="tech-badge">Streamlit</span>
         <span class="tech-badge">Groq API (Llama 3)</span>
-        <span class="tech-badge">Qdrant</span>
-        <span class="tech-badge">HuggingFace</span>
+        <span class="tech-badge">Qdrant Cloud</span>
+        <span class="tech-badge">SQLite</span>
+        <span class="tech-badge">LangChain</span>
         <span class="tech-badge">PyMuPDF</span>
       </div>
       <p>
-        A Retrieval-Augmented Generation (RAG) application that enables users to upload PDF documents and engage in conversational Q&A. 
-        It features a hybrid architecture utilizing local Qdrant vector storage for data persistence, local HuggingFace embeddings for privacy, and the Groq API for high-performance inference.
+        An RAG application engineered for scalability and data persistence. 
+        This system supports <strong>isolated multi-chat sessions</strong> using SQLite for history management and <strong>Qdrant Cloud</strong> for vector storage. 
+        Key features include <strong>metadata filtering</strong> for context separation, strict anti-hallucination guardrails, and a transparent debug UI to visualize retrieved context chunks.
       </p>
       <a class="project-btn" href="https://github.com/Coffeelly/pdf-chatbot-with-vector-db-rag/tree/main" target="_blank">View Project</a>
     </div>
