@@ -176,6 +176,35 @@
   </div>
 
   <div class="project-card">
+  <div class="card-image-wrapper">
+    <img src="{{ 'assets/img/lendguard.png' | prepend: site.baseurl }}" alt="LendGuard-ID">
+  </div>
+  <div class="card-content">
+    <h3>LendGuard-ID: Automated Credit Scoring & Fraud Detection</h3>
+    
+    <div class="tech-stack">
+      <span class="tech-badge">FastAPI</span>
+      <span class="tech-badge">Supabase (Cloud DB)</span>
+      <span class="tech-badge">DeepFace (VGG-Face) & CatBoost</span>
+      <span class="tech-badge">Celery & Redis</span>
+      <span class="tech-badge">Docker</span>
+      <span class="tech-badge">GitHub Actions (CI/CD)</span>
+    </div>
+    
+    <p>
+      An end-to-end fintech simulation engineered with a <strong>Hybrid Cloud Architecture</strong>. 
+      It integrates <strong>DeepFace</strong> for biometric KYC verification and CatBoost for credit risk analysis. 
+      The system solves high-latency AI tasks using an asynchronous <strong>Celery & Redis</strong> worker pipeline, 
+      while leveraging <strong>Supabase</strong> for scalable cloud database & storage management. 
+      Fully containerized via Docker for consistent deployment. Featuring comprehensive <strong>Unit Testing (Pytest)</strong> and a fully automated <strong>CI/CD pipeline</strong> 
+      to ensure code quality and deployment stability.
+    </p>
+    
+    <a class="project-btn" href="https://github.com/Coffeelly/LendGuard" target="_blank">View Project</a>
+    </div>
+  </div>
+  
+  <div class="project-card">
     <div class="card-image-wrapper">
       <img src="{{ 'assets/img/colored hoodie.jpg' | prepend: site.baseurl }}" alt="Multilabel">
     </div>
