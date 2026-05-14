@@ -20,6 +20,7 @@
     max-width: 1400px;
     box-sizing: border-box;
   }
+
   /* 2. Individual Card */
   .project-card {
     background-color: #fff;
@@ -29,41 +30,47 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
 
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   }
 
   /* 3. Card Image Area - BIGGER NOW */
   .card-image-wrapper {
-    height: 300px; /* <--- INCREASED HEIGHT FOR BIGGER IMAGES */
+    height: 300px;
+    /* <--- INCREASED HEIGHT FOR BIGGER IMAGES */
     width: 100%;
-    background-color: #ffffff; /* White background blends with screenshots */
+    background-color: #ffffff;
+    /* White background blends with screenshots */
     border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 10px; /* Adds a little breathing room for the image */
+    padding: 10px;
+    /* Adds a little breathing room for the image */
   }
 
   .card-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Shows full image without cutting it off */
+    object-fit: contain;
+    /* Shows full image without cutting it off */
     transition: transform 0.5s ease;
   }
-  
+
   .project-card:hover .card-image-wrapper img {
-    transform: scale(1.02); /* Subtle zoom */
+    transform: scale(1.02);
+    /* Subtle zoom */
   }
 
   /* 4. Content Area */
   .card-content {
-    padding: 25px; /* More padding for bigger cards */
+    padding: 25px;
+    /* More padding for bigger cards */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -72,12 +79,14 @@
   .card-content h3 {
     margin-top: 0;
     margin-bottom: 12px;
-    font-size: 1.5rem; /* Bigger Title */
+    font-size: 1.5rem;
+    /* Bigger Title */
     color: #222;
   }
 
   .card-content p {
-    font-size: 1rem; /* Bigger Text */
+    font-size: 1rem;
+    /* Bigger Text */
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -131,9 +140,11 @@
       padding: 20px 16px;
       grid-template-columns: 1fr;
     }
+
     .card-image-wrapper {
       height: clamp(160px, 45vw, 250px);
     }
+
     .card-content h3 {
       font-size: 1.2rem;
     }
@@ -167,14 +178,76 @@
         <span class="tech-badge">OpenCV</span>
       </div>
       <p>
-        A robust dual-stream deep learning system designed for real-time surveillance. By combining Skeleton data with Frame Differences, 
-        it effectively detects violence while preserving privacy and significantly reducing computational load through smart motion filtering.
+        A robust dual-stream deep learning system designed for real-time surveillance. By combining Skeleton data with
+        Frame Differences,
+        it effectively detects violence while preserving privacy and significantly reducing computational load through
+        smart motion filtering.
       </p>
-      <a class="project-btn" href="https://github.com/Coffeelly/Real-Time-Two-Stream-Violence-Detection" target="_blank">View Project</a>
+      <a class="project-btn" href="https://github.com/Coffeelly/Real-Time-Two-Stream-Violence-Detection"
+        target="_blank">View Project</a>
     </div>
   </div>
 
-  
+  <div class="project-card">
+    <div class="card-image-wrapper">
+      <img src="{{ 'assets/img/toefl.png' | prepend: site.baseurl }}" alt="TOEFL iBT AI Writing Assistant">
+    </div>
+    <div class="card-content">
+      <h3>TOEFL Helper: Local-First AI Writing Assistant & Evaluator</h3>
+
+      <div class="tech-stack">
+        <span class="tech-badge">Next.js 16 & React 19</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Prisma (SQLite)</span>
+        <span class="tech-badge">Ollama (Local LLM) & Gemini</span>
+        <span class="tech-badge">Playwright & Vitest</span>
+      </div>
+
+      <p>
+        A <strong>Local-First</strong> web application designed for TOEFL iBT writing practice. It leverages
+        <strong>Client-Side LLM Evaluation</strong> to provide structured feedback and ETS rubric scoring directly from
+        the browser, ensuring zero API key exposure to the server. Engineered with a secure <strong>Custom JWT
+          Authentication</strong> system and dynamic <strong>Adaptive Difficulty</strong> logic. The platform ensures
+        high
+        reliability and code quality through comprehensive <strong>E2E Testing (Playwright)</strong> and
+        <strong>Integration Testing (Vitest)</strong>.
+      </p>
+
+      <a class="project-btn" href="https://github.com/Coffeelly/TOEFL-iBT-AI-Writing-Assistant" target="_blank">View
+        Project</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="card-image-wrapper">
+      <img src="{{ 'assets/img/aiclipper.png' | prepend: site.baseurl }}" alt="AI-Clipper">
+    </div>
+    <div class="card-content">
+      <h3>AI-Clipper: Automated Video Highlighting & Rendering Pipeline</h3>
+
+      <div class="tech-stack">
+        <span class="tech-badge">Multi-Agent LLM</span>
+        <span class="tech-badge">GCP (Firestore & GCS)</span>
+        <span class="tech-badge">FastAPI</span>
+        <span class="tech-badge">React (TypeScript)</span>
+        <span class="tech-badge">Whisper (Local STT)</span>
+      </div>
+
+      <p>
+        An end-to-end, AI-powered video processing platform built for high-volume content curation.
+        It features a <strong>Dual-Processing Architecture</strong>: an automated pipeline utilizing a
+        <strong>Multi-Agent Quality Control</strong> system to extract and rank viral-worthy clips, and a highly
+        optimized
+        manual mode
+        powered by <strong>Local Whisper AI</strong> for precision cuts. The system handles complex tasks
+        asynchronously,
+        including dynamic <strong>Person Tracking</strong>, multi-language translation, and automated video rendering.
+      </p>
+
+      <a class="project-btn" href="https://github.com/Coffeelly/AI-Clipper" target="_blank">View Project</a>
+    </div>
+  </div>
+
   <div class="project-card">
     <div class="card-image-wrapper">
       <img src="{{ 'assets/img/jobcv.png' | prepend: site.baseurl }}" alt="Job-CV">
@@ -190,69 +263,46 @@
         <span class="tech-badge">GCP</span>
       </div>
       <p>
-        This project is an AI-powered job matching web application aimed at helping job seekers, especially in the IT industry, find suitable job opportunities based on their skills. 
+        This project is an AI-powered job matching web application aimed at helping job seekers, especially in the IT
+        industry, find suitable job opportunities based on their skills.
         The system leverages vector search technology to match resumes with job descriptions effectively.
       </p>
       <a class="project-btn" href="https://github.com/bwbayu/JobFitte" target="_blank">View Project</a>
     </div>
   </div>
 
+
+
   <div class="project-card">
     <div class="card-image-wrapper">
-      <img src="{{ 'assets/img/aiclipper.png' | prepend: site.baseurl }}" alt="AI-Clipper">
+      <img src="{{ 'assets/img/lendguard.png' | prepend: site.baseurl }}" alt="LendGuard-ID">
     </div>
     <div class="card-content">
-      <h3>AI-Clipper: Automated Video Highlighting & Rendering Pipeline</h3>
-      
+      <h3>LendGuard: Automated Credit Scoring & Fraud Detection</h3>
+
       <div class="tech-stack">
-        <span class="tech-badge">Multi-Agent LLM</span>
-        <span class="tech-badge">GCP (Firestore & GCS)</span>
         <span class="tech-badge">FastAPI</span>
-        <span class="tech-badge">React (TypeScript)</span>
-        <span class="tech-badge">Whisper (Local STT)</span>
+        <span class="tech-badge">Supabase (Cloud DB)</span>
+        <span class="tech-badge">DeepFace (VGG-Face) & CatBoost</span>
+        <span class="tech-badge">Celery & Redis</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">GitHub Actions (CI/CD)</span>
       </div>
-      
+
       <p>
-        An end-to-end, AI-powered video processing platform built for high-volume content curation. 
-        It features a <strong>Dual-Processing Architecture</strong>: an automated pipeline utilizing a 
-        <strong>Multi-Agent Quality Control</strong> system to extract and rank viral-worthy clips, and a highly optimized manual mode 
-        powered by <strong>Local Whisper AI</strong> for precision cuts. The system handles complex tasks asynchronously, 
-        including dynamic <strong>Person Tracking</strong>, multi-language translation, and automated video rendering.
+        An end-to-end fintech simulation engineered with a <strong>Hybrid Cloud Architecture</strong>.
+        It integrates <strong>DeepFace</strong> for biometric KYC verification and CatBoost for credit risk analysis.
+        The system solves high-latency AI tasks using an asynchronous <strong>Celery & Redis</strong> worker pipeline,
+        while leveraging <strong>Supabase</strong> for scalable cloud database & storage management.
+        Fully containerized via Docker for consistent deployment. Featuring comprehensive <strong>Unit Testing
+          (Pytest)</strong> and a fully automated <strong>CI/CD pipeline</strong>
+        to ensure code quality and deployment stability.
       </p>
-      
-      <a class="project-btn" href="https://github.com/Coffeelly/AI-Clipper" target="_blank">View Project</a>
+
+      <a class="project-btn" href="https://github.com/Coffeelly/LendGuard" target="_blank">View Project</a>
     </div>
   </div>
 
-  <div class="project-card">
-  <div class="card-image-wrapper">
-    <img src="{{ 'assets/img/lendguard.png' | prepend: site.baseurl }}" alt="LendGuard-ID">
-  </div>
-  <div class="card-content">
-    <h3>LendGuard: Automated Credit Scoring & Fraud Detection</h3>
-    
-    <div class="tech-stack">
-      <span class="tech-badge">FastAPI</span>
-      <span class="tech-badge">Supabase (Cloud DB)</span>
-      <span class="tech-badge">DeepFace (VGG-Face) & CatBoost</span>
-      <span class="tech-badge">Celery & Redis</span>
-      <span class="tech-badge">Docker</span>
-      <span class="tech-badge">GitHub Actions (CI/CD)</span>
-    </div>
-    
-    <p>
-      An end-to-end fintech simulation engineered with a <strong>Hybrid Cloud Architecture</strong>. 
-      It integrates <strong>DeepFace</strong> for biometric KYC verification and CatBoost for credit risk analysis. 
-      The system solves high-latency AI tasks using an asynchronous <strong>Celery & Redis</strong> worker pipeline, 
-      while leveraging <strong>Supabase</strong> for scalable cloud database & storage management. 
-      Fully containerized via Docker for consistent deployment. Featuring comprehensive <strong>Unit Testing (Pytest)</strong> and a fully automated <strong>CI/CD pipeline</strong> 
-      to ensure code quality and deployment stability.
-    </p>
-    
-    <a class="project-btn" href="https://github.com/Coffeelly/LendGuard" target="_blank">View Project</a>
-    </div>
-  </div>
-  
   <div class="project-card">
     <div class="card-image-wrapper">
       <img src="{{ 'assets/img/colored hoodie.jpg' | prepend: site.baseurl }}" alt="Multilabel">
@@ -264,11 +314,15 @@
       </div>
       <p>
         <strong>🏆 Hology 7.0 Finalist Project</strong><br>
-        This project presents the implementation of a multi-label classification model designed to classify clothing attributes. 
-        The project was developed as part of the Hology Data Mining 2024 Preliminary Competition, organized by Universitas Brawijaya. 
-        It focuses on categorizing images of T-shirts and hoodies from various online stores in Indonesia based on their type (e.g., T-shirt or hoodie) and color (e.g., black, blue, white, etc.).
+        This project presents the implementation of a multi-label classification model designed to classify clothing
+        attributes.
+        The project was developed as part of the Hology Data Mining 2024 Preliminary Competition, organized by
+        Universitas Brawijaya.
+        It focuses on categorizing images of T-shirts and hoodies from various online stores in Indonesia based on their
+        type (e.g., T-shirt or hoodie) and color (e.g., black, blue, white, etc.).
       </p>
-      <a class="project-btn" href="https://github.com/Coffeelly/Multilabel_Clothing_Classification/tree/main" target="_blank">View Project</a>
+      <a class="project-btn" href="https://github.com/Coffeelly/Multilabel_Clothing_Classification/tree/main"
+        target="_blank">View Project</a>
     </div>
   </div>
 
@@ -278,7 +332,7 @@
     </div>
     <div class="card-content">
       <h3>GameVouch: Game Voucher Catalog API</h3>
-  
+
       <div class="tech-stack">
         <span class="tech-badge">Java 17</span>
         <span class="tech-badge">Spring Boot</span>
@@ -286,16 +340,18 @@
         <span class="tech-badge">H2 Database</span>
         <span class="tech-badge">REST API</span>
       </div>
-  
+
       <p>
         A robust backend system designed for managing a digital game voucher catalog.
-        Built using a clean <strong>N-Tier Architecture</strong>, the application enforces a strict separation of concerns
+        Built using a clean <strong>N-Tier Architecture</strong>, the application enforces a strict separation of
+        concerns
         across Controller, Service, and Repository layers.
         It leverages <strong>Spring Data JPA</strong> and Hibernate for seamless Object-Relational Mapping (ORM),
         providing efficient data persistence and robust CRUD operations via an <strong>H2 in-memory database</strong>.
       </p>
-  
-      <a class="project-btn" href="https://github.com/Coffeelly/Game-Voucher-Java-Springboot" target="_blank">View Project</a>
+
+      <a class="project-btn" href="https://github.com/Coffeelly/Game-Voucher-Java-Springboot" target="_blank">View
+        Project</a>
     </div>
   </div>
 
@@ -305,7 +361,7 @@
     </div>
     <div class="card-content">
       <h3>Voice of the Dungeon: AI-Powered RPG</h3>
-  
+
       <div class="tech-stack">
         <span class="tech-badge">Python</span>
         <span class="tech-badge">Mistral AI</span>
@@ -313,7 +369,7 @@
         <span class="tech-badge">PyQt6</span>
         <span class="tech-badge">Pydantic</span>
       </div>
-  
+
       <p>
         An immersive, voice-controlled RPG where an AI acts as the dynamic Game Master.
         Developed for the Mistral Worldwide Hackathon, the application leverages a dual-model architecture:
@@ -322,7 +378,7 @@
         <strong>ElevenLabs WebSocket API</strong> for real-time speech-to-text and text-to-speech,
         orchestrating seamless hands-free gameplay through a robust Python state-management engine.
       </p>
-  
+
       <a class="project-btn" href="https://github.com/bwbayu/voice-of-the-dungeon" target="_blank">View Project</a>
     </div>
   </div>
@@ -341,8 +397,8 @@
         <span class="tech-badge">Streamlit</span>
       </div>
       <p>
-        A production-prototype e-KYC solution engineered for high-efficiency identity verification. 
-        It integrates a hybrid quantization pipeline (FP32/INT8) for low-latency face matching and utilizes 
+        A production-prototype e-KYC solution engineered for high-efficiency identity verification.
+        It integrates a hybrid quantization pipeline (FP32/INT8) for low-latency face matching and utilizes
         Multimodal LLMs for robust, structure-aware ID card data extraction.
       </p>
       <a class="project-btn" href="https://github.com/Coffeelly/face-id-matching" target="_blank">View Project</a>
@@ -364,10 +420,12 @@
         <span class="tech-badge">Metabase</span>
       </div>
       <p>
-        Developed a comprehensive system to reduce student dropout rates. 
-        Includes a Metabase dashboard for real-time monitoring and a deployed Streamlit Machine Learning app that identifies at-risk students based on academic performance and financial factors.      
+        Developed a comprehensive system to reduce student dropout rates.
+        Includes a Metabase dashboard for real-time monitoring and a deployed Streamlit Machine Learning app that
+        identifies at-risk students based on academic performance and financial factors.
       </p>
-      <a class="project-btn" href="https://github.com/Coffeelly/studentdropout-app/tree/main" target="_blank">View Project</a>
+      <a class="project-btn" href="https://github.com/Coffeelly/studentdropout-app/tree/main" target="_blank">View
+        Project</a>
     </div>
   </div>
 
@@ -385,14 +443,19 @@
         <span class="tech-badge">Pandas</span>
       </div>
       <p>
-        An end-to-end NLP pipeline analyzing over <strong>6.4 million Steam reviews</strong> to extract actionable business intelligence. 
-        By leveraging advanced N-Gram analysis, the system identifies core drivers of player churn (e.g., predatory monetization) and retention. 
-        It features a highly optimized predictive modeling phase, benchmarking multiple architectures (Logistic Regression vs. LightGBM vs. Deep Learning MLP) on a perfectly balanced dataset to automate sentiment classification with 83%+ accuracy.
+        An end-to-end NLP pipeline analyzing over <strong>6.4 million Steam reviews</strong> to extract actionable
+        business intelligence.
+        By leveraging advanced N-Gram analysis, the system identifies core drivers of player churn (e.g., predatory
+        monetization) and retention.
+        It features a highly optimized predictive modeling phase, benchmarking multiple architectures (Logistic
+        Regression vs. LightGBM vs. Deep Learning MLP) on a perfectly balanced dataset to automate sentiment
+        classification with 83%+ accuracy.
       </p>
-      <a class="project-btn" href="https://github.com/Coffeelly/Sentiment-Analysis-of-Game-Review/tree/main" target="_blank">View Project</a>
+      <a class="project-btn" href="https://github.com/Coffeelly/Sentiment-Analysis-of-Game-Review/tree/main"
+        target="_blank">View Project</a>
     </div>
   </div>
-  
+
   <div class="project-card">
     <div class="card-image-wrapper">
       <img src="{{ 'assets/img/attrition.png' | prepend: site.baseurl }}" alt="Multilabel">
@@ -406,10 +469,12 @@
         <span class="tech-badge">Business Intelligence</span>
       </div>
       <p>
-        Built an end-to-end system to address a high attrition rate (>10%). 
-        Consists of a Dockerized Metabase dashboard for real-time HR monitoring and a Random Forest model that identifies key risk factors like Overtime and Stock Options.
+        Built an end-to-end system to address a high attrition rate (>10%).
+        Consists of a Dockerized Metabase dashboard for real-time HR monitoring and a Random Forest model that
+        identifies key risk factors like Overtime and Stock Options.
       </p>
-      <a class="project-btn" href="https://github.com/Coffeelly/employee-attrition-analysis/tree/main" target="_blank">View Project</a>
+      <a class="project-btn" href="https://github.com/Coffeelly/employee-attrition-analysis/tree/main"
+        target="_blank">View Project</a>
     </div>
   </div>
 
@@ -426,7 +491,8 @@
         <span class="tech-badge">Pandas</span>
       </div>
       <p>
-        A smart agent that eliminates LLM hallucinations by combining Gemini's reasoning with a strict Python logic engine for 100% hardware compatibility. 
+        A smart agent that eliminates LLM hallucinations by combining Gemini's reasoning with a strict Python logic
+        engine for 100% hardware compatibility.
         Features real-time price fetching from Indonesian marketplaces (Tokopedia/Shopee) and visual component analysis.
       </p>
       <a class="project-btn" href="https://github.com/Coffeelly/Chatbot-PC-Builder" target="_blank">View Project</a>
@@ -448,15 +514,18 @@
         <span class="tech-badge">PyMuPDF</span>
       </div>
       <p>
-        An RAG application engineered for scalability and data persistence. 
-        This system supports <strong>isolated multi-chat sessions</strong> using SQLite for history management and <strong>Qdrant Cloud</strong> for vector storage. 
-        Key features include <strong>metadata filtering</strong> for context separation, strict anti-hallucination guardrails, and a transparent debug UI to visualize retrieved context chunks.
+        An RAG application engineered for scalability and data persistence.
+        This system supports <strong>isolated multi-chat sessions</strong> using SQLite for history management and
+        <strong>Qdrant Cloud</strong> for vector storage.
+        Key features include <strong>metadata filtering</strong> for context separation, strict anti-hallucination
+        guardrails, and a transparent debug UI to visualize retrieved context chunks.
       </p>
-      <a class="project-btn" href="https://github.com/Coffeelly/pdf-chatbot-with-vector-db-rag/tree/main" target="_blank">View Project</a>
+      <a class="project-btn" href="https://github.com/Coffeelly/pdf-chatbot-with-vector-db-rag/tree/main"
+        target="_blank">View Project</a>
     </div>
   </div>
 
-  
+
   <div class="project-card">
     <div class="card-image-wrapper">
       <img src="{{ 'assets/img/cycle.jpeg' | prepend: site.baseurl }}" alt="Multilabel">
@@ -469,13 +538,15 @@
         <span class="tech-badge">Matplotlib</span>
       </div>
       <p>
-        In this project, I analyzed Cyclistic bike-share data using Python and Pandas to compare usage patterns between annual members and casual riders. 
-        I cleaned and processed a year's worth of ride data, revealing that members predominantly use bikes for weekday commutes, while casual riders prefer weekend recreational trips. 
-        Based on these insights, I developed data-driven recommendations for targeted marketing and membership strategies, demonstrating my ability to extract actionable insights from large datasets.
+        In this project, I analyzed Cyclistic bike-share data using Python and Pandas to compare usage patterns between
+        annual members and casual riders.
+        I cleaned and processed a year's worth of ride data, revealing that members predominantly use bikes for weekday
+        commutes, while casual riders prefer weekend recreational trips.
+        Based on these insights, I developed data-driven recommendations for targeted marketing and membership
+        strategies, demonstrating my ability to extract actionable insights from large datasets.
       </p>
       <a class="project-btn" href="https://github.com/Coffeelly/Cyclist-Data-Analysis" target="_blank">View Project</a>
     </div>
   </div>
-  
-</div>
 
+</div>
